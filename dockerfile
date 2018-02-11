@@ -3,7 +3,7 @@ EXPOSE 8080
 
 
 RUN rm /usr/src/app/src/main/resources/application.properties
-COPY application.properties /usr/src/app/src/main/resources/application.properties
+COPY mysql-docker/application.properties /usr/src/app/src/main/resources/application.properties
 
 WORKDIR /usr/src/app
 

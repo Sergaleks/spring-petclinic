@@ -1,4 +1,6 @@
-mysql:
+version: "2"
+services:
+ mysql:
   image: mysql
   ports:
     - "3306:3306"
@@ -10,13 +12,13 @@ mysql:
     - ./src/main/resources/db/mysql/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
     - ./src/main/resources/db/mysql/data.sql:/docker-entrypoint-initdb.d/2-data.sql
 
-pet01:
+ pet01:
   image: petim:staging
   
-pet02:
+ pet02:
   image: petim:staging
 
-nginx:
+ nginx:
   image: nginxim:staging
   ports:
     - "8080:80"
